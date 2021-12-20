@@ -1,0 +1,51 @@
+// Get all users
+Api: http://localhost:3003/
+Method: 'GET'
+response:[
+   {
+        "hierarchy": "Regent Street",
+        "name": "Store",
+        "id": 1
+    },
+    {
+        "hierarchy": "Manchester",
+        "name": "Store1",
+        "id": 2
+    },
+    {
+        "hierarchy": "Edinburgh Street",
+        "name": "Store2",
+        "id": 3
+    }
+  ]
+
+// Create New user
+Api: http://localhost:3003/trees
+Method: 'POST'
+Input data:{
+        "hierarchy": "Regent Street",
+        "name": "Store",
+    }
+Response:{
+        "hierarchy": "Regent Street",
+        "name": "Store",
+        "id": 1
+}
+
+//Update user
+Api: http://localhost:3003/trees/{id}
+Method: 'PUT'
+Input data:{
+        "hierarchy": "Regent Street",
+        "name": "Store",
+    }
+Response:{
+        "hierarchy": "Regent Street",
+        "name": "Store",
+        "id": 1
+}
+
+//Delete user
+Api: http://localhost:3003/trees/{id}
+Method: 'DELETE'
+response: {}
